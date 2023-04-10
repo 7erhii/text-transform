@@ -12,32 +12,25 @@
 		<div class="wrapper">
 			<header>hello</header>
 			<section class="content">
-				<div class="content__input">
-					<!-- <form action="">
-						<input type="text" placeholder="Put your text" autocomplete="off" />
-					</form> -->
-					<input type="text" placeholder="Put your text" autocomplete="off" />
-
-					<div class="content__selects">
-						<div class="content__selects-btn">
-							<button>1</button>
-						</div>
-						<div class="content__selects-btn">
-							<button>2</button>
-						</div>
-						<div class="content__selects-btn">
-							<button>3</button>
+				<div class="input">
+					<div class="input__content">
+						<p class="input__descr">Here we need to describe our transforms</p>
+						<form action="" class="input__form">
+							<input class="input__line" id="form" type="text" placeholder="your text" />
+						</form>
+						<div class="input__buttons">
+							<button class="input__btn" id="btn-1">1</button>
+							<button class="input__btn" id="btn-2">2</button>
+							<button class="input__btn" id="btn-3">3</button>
 						</div>
 					</div>
 				</div>
-				<div class="content__output">
-					<div class="output__form">
-						<button class="output__form-clear"></button>
-						<div class="output__form-field"></div>
-					</div>
+				<div class="output">
+					<div class="output__copy">Copy Text</div>
+					<div class="output__text" id="output-data"></div>
 				</div>
 			</section>
-			<footer></footer>
+			<footer>fooret</footer>
 		</div>
 
 		<script src="/script.js"></script>

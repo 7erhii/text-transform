@@ -1,3 +1,82 @@
+body {
+	font-size: 16px;
+	background: #333;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 930px;
+	padding: 15px;
+	height: 700px;
+	background: cadetblue;
+}
+
 header {
-	color: rgb(17, 0, 255);
+	text-align: center;
+	padding: 20px 0;
+	text-transform: capitalize;
+	font-size: 24px;
+	color: #333;
+	font-weight: 600;
+}
+
+.content {
+	display: flex;
+}
+
+.input {
+	width: 50%;
+	background: #bdbdbd;
+	border-right: 1px solid #000;
+	height: 400px;
+
+	&__descr {
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	&__form {
+		display: flex;
+	}
+
+	&__line {
+		border: 1px solid #000;
+		margin: 0 auto;
+		height: 30px;
+		border-radius: 8px;
+		padding: 2px 5px;
+		text-align: center;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		width: 80px;
+		height: 40px;
+		margin: 4px;
+		background: #eaeaea;
+		border-radius: 8px;
+	}
+}
+
+.output {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	background: #eac0c0;
+	max-height: 400px;
+	&__copy {
+		text-align: center;
+		padding: 20px 0;
+		background: #fff;
+	}
+
+	&__text {
+		padding: 15px;
+		background: #eaeaea;
+		flex-grow: 1;
+		overflow: scroll;
+	}
 }
