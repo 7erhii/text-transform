@@ -25,21 +25,16 @@ button1.addEventListener('click', function (e) {
 });
 
 function copyText() {
-	// Создаем новый объект Range
 	const range = document.createRange();
 
-	// Выбираем содержимое блока output-data
 	range.selectNodeContents(outputData);
 
-	// Выбираем содержимое объекта Range
 	const selection = window.getSelection();
 	selection.removeAllRanges();
 	selection.addRange(range);
 
-	// Копируем содержимое в буфер обмена
 	document.execCommand('copy');
 
-	// Отменяем выбор
 	selection.removeAllRanges();
 
 	console.log('Текст скопирован');
