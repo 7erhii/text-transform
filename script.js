@@ -82,6 +82,24 @@ button4.addEventListener('click', function (e) {
 	outputData.innerHTML = '';
 
 	const text = textForm.value;
+	const textArr = text.split('');
+
+	const combinations = [];
+
+	for (let i = 0; i < Math.pow(2, textArr.length - 1); i++) {
+		const combination = textArr.slice();
+		const binary = i.toString(2).padStart(textArr.length - 1, '0');
+
+		for (let j = 0; j < binary.length; j++) {
+			if (binary[j] === '1') {
+				combination[j] += '-';
+			}
+		}
+
+		combinations.push(combination.join(''));
+	}
+
+	outputData.innerHTML = combinations.join('<br>');
 });
 
 //copy text
@@ -102,3 +120,4 @@ function copyText() {
 
 	outputData.innerHTML = '';
 }
+//================================================================
