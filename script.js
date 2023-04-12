@@ -16,11 +16,11 @@ textForm.addEventListener('keydown', function (e) {
 });
 
 button1.addEventListener('click', function (e) {
-	outputData.innerHTML = '';
+	// outputData.innerHTML = '';
 
 	const text = textForm.value;
 
-	for (let i = 0; i < 8; i++) {
+	for (let i = 0; i < 4; i++) {
 		for (let j = 0; j < 20; j++) {
 			const spaces = j > 10 ? 20 - j : j;
 			outputData.innerHTML += '&nbsp;'.repeat(spaces) + text + '<br>';
@@ -29,7 +29,7 @@ button1.addEventListener('click', function (e) {
 });
 
 button2.addEventListener('click', function (e) {
-	outputData.innerHTML = '';
+	// outputData.innerHTML = '';
 
 	const text = textForm.value;
 
@@ -42,7 +42,7 @@ button2.addEventListener('click', function (e) {
 });
 
 button3.addEventListener('click', function (e) {
-	outputData.innerHTML = '';
+	// outputData.innerHTML = '';
 
 	const text = textForm.value;
 	const emojis = [
@@ -70,7 +70,7 @@ button3.addEventListener('click', function (e) {
 
 	for (let i = 0; i < 8; i++) {
 		for (let j = 0; j < 20; j++) {
-			const spaces = j > 40 ? 40 - j : j;
+			const spaces = j > 10 ? 20 - j : j;
 			const randomIndex = Math.floor(Math.random() * emojis.length);
 			const randomEmoji = emojis[randomIndex];
 			outputData.innerHTML += '&nbsp;'.repeat(spaces) + randomEmoji + text + '<br>';
@@ -83,21 +83,9 @@ button4.addEventListener('click', function (e) {
 
 	const text = textForm.value;
 	const textArr = text.split('');
+	console.log(textArr);
 
 	const combinations = [];
-
-	for (let i = 0; i < Math.pow(2, textArr.length - 1); i++) {
-		const combination = textArr.slice();
-		const binary = i.toString(2).padStart(textArr.length - 1, '0');
-
-		for (let j = 0; j < binary.length; j++) {
-			if (binary[j] === '1') {
-				combination[j] += '-';
-			}
-		}
-
-		combinations.push(combination.join(''));
-	}
 
 	outputData.innerHTML = combinations.join('<br>');
 });
